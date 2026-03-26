@@ -25,5 +25,8 @@ def dashboard_view(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.dashboard, name='dashboard'),  # แก้บรรทัดนี้: ให้หน้าแรก (ค่าว่าง '') ชี้ไปที่ views.dashboard
+    path('', views.dashboard, name='dashboard'),  # หน้าแรก (Dashboard)
+    path('rooms/', views.rooms, name='rooms'),    # <--- เพิ่มบรรทัดนี้: สำหรับหน้าจัดการห้องพัก
+    path('contracts/', views.contracts, name='contracts'),  # <--- เพิ่มบรรทัดนี้
+    path('check-in-out/', views.check_in_out, name='check_in_out'), # <--- เพิ่มบรรทัดนี้
 ]
